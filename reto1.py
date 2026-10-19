@@ -1,11 +1,16 @@
-cola=[pendiente1, pendiente2, pendiente3]
+from app_consola import cola_pendientes 
 
 def consultar_siguiente():
-    if len(cola)==0:
+    if len(cola_pendientes)==0:
         return None
 
     else:
-        return cola[0]
+        return cola_pendientes[0]
 
-consultar_siguiente()
-consultar_siguiente()
+print("--- PRUEBA 1: Primera consulta ---")
+print("Siguiente:", consultar_siguiente())
+print("Cantidad de elementos en cola:", len(cola_pendientes))
+
+print("\n--- PRUEBA 2: Segunda consulta (debe ser el mismo ID y la misma longitud) ---")
+print("Siguiente:", consultar_siguiente())
+print("Cantidad de elementos en cola:", len(cola_pendientes))
